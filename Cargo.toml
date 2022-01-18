@@ -1,5 +1,9 @@
 [package]
 name = "dnutils"
+authors = ["Veirt <vveirt@gmail.com>"]
+description = "A collection of Dragon Nest development utilities."
+license = "GPL-3.0"
+license-file = "LICENSE"
 version = "0.1.0"
 edition = "2021"
 
