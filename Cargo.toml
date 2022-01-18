@@ -3,8 +3,10 @@ name = "dnutils"
 authors = ["Veirt <vveirt@gmail.com>"]
 description = "A collection of Dragon Nest development utilities."
 license = "GPL-3.0"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 [dependencies]
-dnpak = "1.3.1"
+dnpak = { version = "1.3.1", git = "https://github.com/Veirt/dnpak-rs", branch = "dev" }
+# dnpak = { path = "../dnpak-rs"}
+# dnpak = "1.3.1"
