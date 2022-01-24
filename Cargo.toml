@@ -7,6 +7,5 @@ version = "0.1.2"
 edition = "2021"
 
 [dependencies]
-dnpak = { version = "1.3.1", git = "https://github.com/Veirt/dnpak-rs", branch = "dev" }
+dnpak = "1.3.3"
 # dnpak = { path = "../dnpak-rs"}
-# dnpak = "1.3.1"
