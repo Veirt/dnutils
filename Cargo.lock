@@ -37,9 +37,9 @@ dependencies = [
 
 [[package]]
 name = "dnpak"
-version = "2.0.0"
+version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d00d759ae0eb3780e60baee530d9ada13cc88d07e1332cc863fa15c88f2ac954"
+checksum = "ad50cd83c69f12ab6fb418ee6add640c72971afbf6eaedd90b225444358222c8"
 dependencies = [
  "cfg-if",
  "flate2",
