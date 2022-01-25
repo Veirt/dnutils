@@ -23,10 +23,10 @@ fn main() {
         Some(path) => {
             let output_path = Path::new(&path).display().to_string();
 
-            pak.unpack(Some(output_path)).unwrap();
+            pak.unpack_all(Some(output_path)).unwrap();
         }
         None => {
-            pak.unpack(None).unwrap();
+            pak.unpack_all(None).unwrap();
         }
     }
 
