@@ -19,16 +19,9 @@ fn main() {
     let mut pak = EtFileSystem::read(&input_path);
 
     let output = args.next();
-    match output {
-        Some(path) => {
-            let output_path = Path::new(&path).display().to_string();
+    let output_path = output.map(|path| Path::new(&path).display().to_string());
 
-            pak.unpack_all(Some(output_path)).unwrap();
-        }
-        None => {
-            pak.unpack_all(None).unwrap();
-        }
-    }
+    pak.unpack_all(output_path, true).unwrap();
 
     pak.close_file_system();
 }

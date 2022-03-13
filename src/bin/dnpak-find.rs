@@ -18,18 +18,15 @@ fn main() {
 
     let pak = EtFileSystem::read(&input_path);
     let query = args.next();
-    match query {
-        Some(q) => {
-            let file_list = pak.find_files(&q);
-            for file in file_list {
-                println!("{}", file);
-            }
-        }
-        None => {
-            let file_list = pak.get_files();
-            for file in file_list {
-                println!("{}", file);
-            }
-        }
+
+    let files;
+    if let Some(query) = query {
+        files = pak.find_files(&query);
+    } else {
+        files = pak.get_files();
+    }
+
+    for file in files {
+        println!("{}", file);
     }
 }
