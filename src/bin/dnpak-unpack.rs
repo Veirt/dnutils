@@ -1,3 +1,4 @@
+#![windows_subsystem = "windows"]
 use std::{env, path::Path, process::exit};
 
 use dnpak::EtFileSystem;
