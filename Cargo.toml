@@ -5,6 +5,7 @@ description = "A collection of Dragon Nest development utilities."
 license = "GPL-3.0"
 version = "0.1.9"
 edition = "2021"
+exclude = ["/scripts"]
 
 [dependencies]
 dnpak = "2.1.1"
