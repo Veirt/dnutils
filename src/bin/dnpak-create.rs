@@ -11,7 +11,8 @@ fn main() {
         eprintln!("Please input a directory.");
         exit(1);
     });
-    let input_path = Path::new(&input).display().to_string();
+    let mut input_path = Path::new(&input).display().to_string();
+    println!("{}", &input_path);
 
     let output = args.next();
 
@@ -22,7 +23,13 @@ fn main() {
         if let Some(path) = output {
             tmp_path = Path::new(&path).display().to_string();
         } else {
-            tmp_path = input_path.clone();
+            // to prevent output inside the folder
+            let last_char = input_path.chars().last().unwrap();
+            if last_char == '/' || last_char == '\\' {
+                input_path.pop();
+            }
+
+            tmp_path = input_path.clone()
         }
 
         if !tmp_path.ends_with(".pak") {
