@@ -9,4 +9,6 @@ exclude = ["/scripts"]
 
 [dependencies]
 dnpak = "2.1.1"
+native-windows-gui = "1.0.12"
+md-5 = "0.10.1"
 # dnpak = { path = "../dnpak-rs"}
