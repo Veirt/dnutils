@@ -70,7 +70,7 @@ fn main() {
                     let mut contents = String::new();
                     for file in pak.get_files() {
                         let path = {
-                            let mut tmp = format!("{}\n", &file.to_string()[1..]);
+                            let mut tmp = format!("{}\r\n", &file.to_string()[1..]);
 
                             if tmp.starts_with("resource") || tmp.starts_with("mapdata") {
                                 tmp = "D ".to_owned() + &tmp;
@@ -111,7 +111,7 @@ fn main() {
                     let digest = Md5::digest(&buffer);
                     fs::write(
                         format!("{}/Patch{}.pak.md5", &pad_version, &pad_version),
-                        format!("{:x}\n", &digest),
+                        format!("{:x}\r\n", &digest),
                     )
                     .expect("Cannot write the md5 file");
 
