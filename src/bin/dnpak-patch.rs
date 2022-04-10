@@ -101,6 +101,13 @@ fn main() {
                     )
                     .expect("Cannot write the txt file");
 
+                    // cfg
+                    fs::write(
+                        "PatchInfoServer.cfg",
+                        format!("Version {:0>3}", version.text()),
+                    )
+                    .expect("Cannot write the cfg file");
+
                     // md5
                     let mut buffer = Vec::new();
                     fs::File::open(&input_path)
