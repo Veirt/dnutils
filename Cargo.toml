@@ -3,7 +3,7 @@ name = "dnutils"
 authors = ["Veirt <vveirt@gmail.com>"]
 description = "A collection of Dragon Nest development utilities."
 license = "GPL-3.0"
-version = "0.1.11"
+version = "0.1.12"
 edition = "2021"
 exclude = ["/scripts"]
 
